@@ -1,0 +1,31 @@
+{
+  "onBoardingTitle1" : "Meet new friends nearby you" ,
+  "onBoardingTitle2" : "Have fun way to share the moment with friends" ,
+  "onBoardingTitle3" : "Share your happy moments" ,
+  "onBoardingDescription1" : "Wave enables users to connect, interact, and share content with each other in a virtual environment" ,
+  "onBoardingDescription2" : "'Wave allows users to create a profile, connect with friends or like-minded individuals, share information, photos, and videos" ,
+  "onBoardingDescription3" : "Wave  designed to facilitate communication, networking, and sharing of information among individuals or groups" ,
+  "onBoardingButton" : "Get Started" ,
+  "onBoardingButtonSkip" : "Skip" ,
+  "loginTitle" : "Sign in" ,
+  "loginEmailAddress" : "Email Address" ,
+  "loginPassword" : "Password" ,
+  "loginForgetPassword" : "Forget Password ?" ,
+  "loginOr" : "or" ,
+  "loginCreateAccount" : "Create an account ?" ,
+  "registerTitle" : "Sign up" ,
+  "registerFullName" : "Full name" ,
+  "registerPhone" : "Phone number" ,
+  "registerButton" : "Continue" ,
+  "loading" : "loading" ,
+  "registerHaveAccount": "Already have an account ?" ,
+  "selectGenderTitle" : "What's your Gender ?" ,
+  "selectGenderMale" : "Male" ,
+  "selectGenderFemale" : "Female?" ,
+  "selectGenderButton" : "Next" ,
+  "selectGenderDescription" : "You can change who sees your gender on your profile later."  ,
+  "brithDayTitle": "What's your birthday ?" ,
+  "brithDayDescription": "Choose your date of birth. You can always make this private later."
+
+
+}
