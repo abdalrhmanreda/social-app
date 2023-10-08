@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:social_app/core/cache/hive_cache.dart';
+import 'package:social_app/core/constant/strings.dart';
 import 'package:social_app/ui/features/auth/presentation/controller/auth_cubit.dart';
 
 import 'config/routes/router.dart';
 import 'config/routes/routes_path.dart';
 import 'config/themes/themes.dart';
-import 'core/cache/cache_helper.dart';
 import 'core/cubit/app_cubit.dart';
 import 'core/cubit/observer/blocObserver.dart';
 import 'firebase_options.dart';
@@ -16,7 +17,10 @@ import 'generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper.init();
+  await HiveCache.openHive();
+  userId = HiveCache.getData(key: 'uId');
+
+  debugPrint(userId);
   Bloc.observer = MyBlocObserver();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -50,7 +54,7 @@ class WaveApp extends StatelessWidget {
                 ],
                 supportedLocales: S.delegate.supportedLocales,
                 debugShowCheckedModeBanner: false,
-                initialRoute: RoutePath.layout,
+                initialRoute: RoutePath.register,
                 onGenerateRoute: generateRoute,
                 theme: Style.lightTheme,
                 darkTheme: Style.darkTheme,

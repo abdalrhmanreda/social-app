@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_app/core/cache/hive_cache.dart';
 
 import '../../models/user_model.dart';
 
@@ -93,6 +94,7 @@ class AuthCubit extends Cubit<AuthStates> {
         .then((value) {
       createUser(
           name: name, email: email, uId: value.user!.uid, phoneNumber: phone);
+      HiveCache.saveData(key: 'uId', value: value.user!.uid.toString());
     }).catchError((error) {
       print(error.toString());
       emit(FailureState(message: error.toString()));
@@ -121,7 +123,7 @@ class AuthCubit extends Cubit<AuthStates> {
         .doc(uId)
         .set(userModel.toMap())
         .then((value) {
-      emit(CreateUserSuccessState());
+      emit(CreateUserSuccessState(uId: uId));
     }).catchError((error) {
       print(error.toString());
       emit(FailureState(message: error.toString()));

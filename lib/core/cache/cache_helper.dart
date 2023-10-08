@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -5,7 +6,7 @@ class CacheHelper {
 
   static init() async {
     sharedPreferences = await SharedPreferences.getInstance().then((value) {
-      print('Initial SharedPreferences');
+      debugPrint('Initial SharedPreferences');
     });
   }
 
@@ -22,9 +23,12 @@ class CacheHelper {
     }
   }
 
-  static Object? getData({
+  static dynamic getData({
     required String key,
   }) {
+    if (sharedPreferences == null) {
+      init();
+    }
     return sharedPreferences!.get(key);
   }
 

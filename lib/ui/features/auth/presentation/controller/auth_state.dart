@@ -7,7 +7,11 @@ class AuthInitial extends AuthStates {}
 
 class LoginSuccessState extends AuthStates {}
 
-class CreateUserSuccessState extends AuthStates {}
+class CreateUserSuccessState extends AuthStates {
+  final String uId;
+
+  CreateUserSuccessState({required this.uId});
+}
 
 class FailureState extends AuthStates {
   final String message;

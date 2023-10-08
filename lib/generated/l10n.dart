@@ -250,71 +250,61 @@ class S {
     );
   }
 
-  /// `What's your Gender ?`
-  String get selectGenderTitle {
+  /// `Feeds`
+  String get layoutTitle1 {
     return Intl.message(
-      'What\'s your Gender ?',
-      name: 'selectGenderTitle',
+      'Feeds',
+      name: 'layoutTitle1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Male`
-  String get selectGenderMale {
+  /// `Chat`
+  String get layoutTitle2 {
     return Intl.message(
-      'Male',
-      name: 'selectGenderMale',
+      'Chat',
+      name: 'layoutTitle2',
       desc: '',
       args: [],
     );
   }
 
-  /// `Female?`
-  String get selectGenderFemale {
+  /// `Reels`
+  String get layoutTitle3 {
     return Intl.message(
-      'Female?',
-      name: 'selectGenderFemale',
+      'Reels',
+      name: 'layoutTitle3',
       desc: '',
       args: [],
     );
   }
 
-  /// `Next`
-  String get selectGenderButton {
+  /// `Profile`
+  String get layoutTitle4 {
     return Intl.message(
-      'Next',
-      name: 'selectGenderButton',
+      'Profile',
+      name: 'layoutTitle4',
       desc: '',
       args: [],
     );
   }
 
-  /// `You can change who sees your gender on your profile later.`
-  String get selectGenderDescription {
+  /// `Edit Profile`
+  String get profileEdit {
     return Intl.message(
-      'You can change who sees your gender on your profile later.',
-      name: 'selectGenderDescription',
+      'Edit Profile',
+      name: 'profileEdit',
       desc: '',
       args: [],
     );
   }
 
-  /// `What's your birthday ?`
-  String get brithDayTitle {
+  /// `Share Profile`
+  String get profileShare {
     return Intl.message(
-      'What\'s your birthday ?',
-      name: 'brithDayTitle',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Choose your date of birth. You can always make this private later.`
-  String get brithDayDescription {
-    return Intl.message(
-      'Choose your date of birth. You can always make this private later.',
-      name: 'brithDayDescription',
+      'Share Profile',
+      name: 'profileShare',
       desc: '',
       args: [],
     );

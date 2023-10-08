@@ -18,7 +18,9 @@ class LayoutScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: buildLayoutAppBar(context),
-          floatingActionButton: buildLayoutFloatingActionButton(),
+          body:
+              AppCubit.get(context).screens[AppCubit.get(context).currentIndex],
+          floatingActionButton: buildLayoutFloatingActionButton(context),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: buildBottomNavigationBar(context),

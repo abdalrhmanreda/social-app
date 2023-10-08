@@ -19,13 +19,12 @@
   "registerButton" : "Continue" ,
   "loading" : "loading" ,
   "registerHaveAccount": "Already have an account ?" ,
-  "selectGenderTitle" : "What's your Gender ?" ,
-  "selectGenderMale" : "Male" ,
-  "selectGenderFemale" : "Female?" ,
-  "selectGenderButton" : "Next" ,
-  "selectGenderDescription" : "You can change who sees your gender on your profile later."  ,
-  "brithDayTitle": "What's your birthday ?" ,
-  "brithDayDescription": "Choose your date of birth. You can always make this private later."
+  "layoutTitle1": "Feeds",
+  "layoutTitle2": "Chat",
+  "layoutTitle3": "Reels",
+  "layoutTitle4": "Profile",
+  "profileEdit" : "Edit Profile" ,
+  "profileShare" : "Share Profile"
 
 
 }

@@ -22,10 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "brithDayDescription": MessageLookupByLibrary.simpleMessage(
-            "Choose your date of birth. You can always make this private later."),
-        "brithDayTitle":
-            MessageLookupByLibrary.simpleMessage("What\'s your birthday ?"),
+        "layoutTitle1": MessageLookupByLibrary.simpleMessage("Feeds"),
+        "layoutTitle2": MessageLookupByLibrary.simpleMessage("Chat"),
+        "layoutTitle3": MessageLookupByLibrary.simpleMessage("Reels"),
+        "layoutTitle4": MessageLookupByLibrary.simpleMessage("Profile"),
         "loading": MessageLookupByLibrary.simpleMessage("loading"),
         "loginCreateAccount":
             MessageLookupByLibrary.simpleMessage("Create an account ?"),
@@ -50,18 +50,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Have fun way to share the moment with friends"),
         "onBoardingTitle3":
             MessageLookupByLibrary.simpleMessage("Share your happy moments"),
+        "profileEdit": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "profileShare": MessageLookupByLibrary.simpleMessage("Share Profile"),
         "registerButton": MessageLookupByLibrary.simpleMessage("Continue"),
         "registerFullName": MessageLookupByLibrary.simpleMessage("Full name"),
         "registerHaveAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account ?"),
         "registerPhone": MessageLookupByLibrary.simpleMessage("Phone number"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage("Sign up"),
-        "selectGenderButton": MessageLookupByLibrary.simpleMessage("Next"),
-        "selectGenderDescription": MessageLookupByLibrary.simpleMessage(
-            "You can change who sees your gender on your profile later."),
-        "selectGenderFemale": MessageLookupByLibrary.simpleMessage("Female?"),
-        "selectGenderMale": MessageLookupByLibrary.simpleMessage("Male"),
-        "selectGenderTitle":
-            MessageLookupByLibrary.simpleMessage("What\'s your Gender ?")
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Sign up")
       };
 }

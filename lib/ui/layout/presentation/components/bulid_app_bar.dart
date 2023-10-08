@@ -7,7 +7,7 @@ import '../../../../core/cubit/app_cubit.dart';
 AppBar buildLayoutAppBar(BuildContext context) {
   return AppBar(
     title: Text(
-      AppCubit.get(context).titles[AppCubit.get(context).currentIndex],
+      AppCubit.get(context).titles(context)[AppCubit.get(context).currentIndex],
       style: Theme.of(context).appBarTheme.titleTextStyle!.copyWith(
             fontSize: 18.sp,
           ),

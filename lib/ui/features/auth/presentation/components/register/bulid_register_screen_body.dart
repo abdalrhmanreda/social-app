@@ -1,3 +1,4 @@
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +10,7 @@ import 'package:social_app/core/components/flutter_toast.dart';
 import '../../../../../../config/colors/app_colors.dart';
 import '../../../../../../core/components/custom_button.dart';
 import '../../../../../../core/components/custom_text_button.dart';
+import '../../../../../../core/components/progress_indector.dart';
 import '../../../../../../generated/assets.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../controller/auth_cubit.dart';
@@ -65,26 +67,31 @@ BlocConsumer buildRegisterScreenBody({
                   nameController: nameController,
                   phoneController: phoneController,
                 ),
-                CustomButton(
-                  onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      AuthCubit.get(context).signUp(
-                        name: nameController.text,
-                        password: passController.text,
-                        email: emailController.text,
-                        phone: phoneController.text,
-                      );
-                    }
-                  },
-                  text: S.of(context).registerButton,
-                  height: 44.h,
-                  width: MediaQuery.of(context).size.width,
-                  radius: 15,
-                  color: AppColors.kPrimaryColor,
-                  textColor: 0xffffffff,
-                  vertical: 0,
-                  horizontal: 0,
-                  fontSize: 16,
+                ConditionalBuilder(
+                  condition: state is! LoadingState,
+                  builder: (context) => CustomButton(
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        AuthCubit.get(context).signUp(
+                          name: nameController.text,
+                          password: passController.text,
+                          email: emailController.text,
+                          phone: phoneController.text,
+                        );
+                      }
+                    },
+                    text: S.of(context).registerButton,
+                    height: 44.h,
+                    width: MediaQuery.of(context).size.width,
+                    radius: 15,
+                    color: AppColors.kPrimaryColor,
+                    textColor: 0xffffffff,
+                    vertical: 0,
+                    horizontal: 0,
+                    fontSize: 16,
+                  ),
+                  fallback: (context) =>
+                      const Center(child: CustomLoadingIndicator()),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 40,
